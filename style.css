@@ -1,0 +1,627 @@
+.custom-gradient-topbar {
+    /* التدرج من الأزرق الغامق إلى الأزرق الفاتح (من اليسار إلى اليمين) */
+    background: linear-gradient(to right,rgb(176, 176, 255), #0014c7d3); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تعديل ألوان النصوص والأيقونات لتظهر بوضوح فوق التدرج الداكن */
+.custom-gradient-topbar i, 
+.custom-gradient-topbar span {
+    color: #ffffff !important; /* جعل الخط أبيض ليتناسب مع الخلفية الزرقاء */
+    opacity: 0.9;
+}
+
+.custom-gradient-topbar a:hover i {
+    color: #fd7e14 !important; /* لمسة برتقالية من لون اللوغو عند التمرير */
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAVBAR   
+
+
+/* استيراد خط عصري (اختياري) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* تنسيق الروابط لتكون سوداء وبدون خط سفلي */
+.nav-link {
+    color: #000 !important;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important; /* أو البرتقالي حسب رغبتك */
+}
+
+/* تنسيق الفراغات بين العناصر في الموبايل */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .d-flex {
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+/* search bar */
+
+/* From Uiverse.io by alexruix */ 
+.group {
+ display: flex;
+ line-height: 28px;
+ align-items: center;
+ position: relative;
+ max-width: 190px;
+}
+
+.input {
+ width: 100%;
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: rgba(234,76,137,0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* carosel
+
+/* تغيير لون الخط للداكن */
+
+.carousel-caption {
+    color: #333 !important; /* لون غامق */
+    bottom: 30%; /* لرفع النص للأعلى قليلاً */
+}
+
+/* محاذاة النص لليسار في السلايد الأول */
+.caption-left {
+    text-align: left !important;
+    left: 10% !important;
+    right: auto !important;
+}
+
+/* محاذاة النص لليمين في السلايد الثاني */
+.caption-right {
+    text-align: right !important;
+    right: 10% !important;
+    left: auto !important;
+}
+
+.caption-right {
+    text-align: right !important;
+    right: 10% !important;
+    left: auto !important;
+}
+
+
+/* تغيير لون أزرار التنقل (الأسهم) للأزرق الغامق */
+.custom-nav-btn .carousel-control-prev-icon,
+.custom-nav-btn .carousel-control-next-icon {
+    background-color: #0d6efd; /* اللون الأزرق الخاص بالتوب بار */
+    padding: 20px;
+    border-radius: 50%;
+}
+
+/* التصحيح: استبدل [button] بكلمة button مباشرة */
+.carousel-indicators button {
+    background-color: #0d6efd !important;
+    height: 10px; /* اختياري: لجعلها أوضح */
+    width: 30px;
+}
+
+/* لضمان أن النقطة النشطة بلون أغمق أو أوضح */
+.carousel-indicators .active {
+    background-color: #004e92 !important; 
+}
+/*                   H1                  */
+
+.h1{
+
+text-align: center;
+margin-top: 100px;
+
+}
+
+.p{
+text-align: center;
+size: 15px;
+color: #5393f3;
+margin-bottom: 100px;    
+}
+
+
+
+
+
+
+
+
+/* Card */
+
+
+
+*{
+  box-sizing: border-box;
+}
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px; /* زدنا العرض لاستيعاب 4 كروت (4 * 300px + الهوامش) */
+    margin: 0 auto;
+}
+
+.card {
+    margin: 10px; /* تقليل الهامش قليلاً لضمان بقائها في صف واحد */
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #fff;
+    width: 280px; /* تحديد عرض ثابت أصغر قليلاً ليناسب الصف */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+
+.card--1 .card__img, .card--1 .card__img--hover {
+    background-image: url('https://i02.appmifile.com/451_item_sg/24/02/2026/28044683b1afb5f3b29257f1e2e0e92e.png?thumb=1&w=500&q=85');
+}
+
+.card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('https://storage.micromagma.ma/micromagma/fa90cf202eb21d9e331e30fc150ca613.jpg');
+}
+.card--3 .card__img, .card--3 .card__img--hover {
+    background-image: url('https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666873075.11236925.png');
+}
+
+.card--4 .card__img, .card--4 .card__img--hover {
+    background-image: url('https://mi-store.ma/wp-content/uploads/2023/03/pms_1618311650.53424548.png');
+}
+
+.card__like {
+    width: 18px;
+}
+
+.card__clock {
+    width: 15px;
+  vertical-align: middle;
+    fill: #AD7D52;
+}
+.card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+  
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+  
+}
+.card {
+  margin-right: 25px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+    width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+   padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+
+}
+
+
+/*    infinity scroller        */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 25s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+
+
+
+/* VIDIO */
+
+/* Card Design */
+.video-card {
+  max-width: 600px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #f0f4f8;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.15);
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #000;
+}
+
+.thumbnail, .video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* State Classes */
+.video.active {
+  opacity: 1;
+}
+
+.thumbnail.hide {
+  opacity: 0;
+}
+
+/* Overlay Icon */
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: rgba(13, 110, 253, 0.1); /* غطاء أزرق شفاف */
+  transition: 0.3s;
+}
+
+.video-card:hover .video-overlay {
+  background: transparent;
+}
+
+/* Title Styling */
+.title {
+  font-size: 18px;
+  color: #0d6efd; /* Pure Blue */
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* Slider  FO POCO PAGE Container */
+.slider {
+    background: #000; /* خلفية سوداء تعطي فخامة لصور POCO */
+    height: 500px;    /* طول مماثل لقسم الـ Hero */
+    margin: 0; 
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Gradients on the sides (Optional: can be removed for cleaner Hero) */
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+/* The Track that moves */
+.slide-track {
+    /* السرعة: 30 ثانية لـ 7 صور ضخمة تعطي حركة انسيابية */
+    animation: scroll-hero 65s linear infinite;
+    display: flex;
+    /* العرض الكلي: 100% لكل صورة * 14 صورة */
+    width: calc(100vw * 14); 
+}
+
+/* Individual Slide */
+.slide {
+    height: 600px;
+    width: 100vw; /* كل صورة تأخذ عرض الشاشة بالكامل */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضمان ملء الصورة للمساحة دون تمطيط */
+}
+
+/* Animation Keyframes for Full Width */
+@keyframes scroll-hero {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100vw * 7)); } /* يتحرك بمقدار 7 صور */
+}
+
+/* Responsive height for mobile */
+@media (max-width: 768px) {
+    .slider, .slide {
+        height: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+/* POCO PARAGRAPH */
+
+
+.image-wrapper img {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(-5deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                       FOOTER                      */
+
+
+/* إجبار نصوص وروابط الفوتر على اللون الأبيض */
+footer.bg-dark h5 {
+    color: #ffffff !important;
+}
+
+footer.bg-dark a.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* لون أبيض شفاف قليلاً */
+}
+
+footer.bg-dark a.nav-link:hover {
+    color: #ffffff !important; /* أبيض كامل عند التمرير */
+    text-decoration: dashed !important;
+}
+
+footer.bg-dark p {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+
